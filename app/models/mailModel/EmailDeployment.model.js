@@ -1,7 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
     const EmailDeployment = sequelize.define("EmailDeployment", {
       emailDeploymentId: {
-        type: DataTypes.BIGINT
+        type: DataTypes.BIGINT,
+        autoIncrement: true,
+        primaryKey: true
       },
       name: {
         type: DataTypes.STRING

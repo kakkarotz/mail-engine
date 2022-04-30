@@ -7,7 +7,7 @@ const router = express.Router();
 
 router
   .get('/:id', EmailDeploymentController.getDeployemntById)
-  .post('/', user.createDeployment)
-  .delete('/:id', user.onDeleteDeployemntById)
+  .post('/', EmailDeploymentController.createDeployment)
+  .delete('/:id', EmailDeploymentController.DeleteDeployemntById)
 
 export default router;
