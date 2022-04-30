@@ -1,8 +1,7 @@
-import express from 'express';
+const express = require('express')
 
 // controller
-import EmailDeploymentController from '../controllers/EmailDeploymentController';
-
+const EmailDeploymentController = require('../controllers/EmailDeploymentController')
 const router = express.Router();
 
 router
@@ -10,4 +9,4 @@ router
   .post('/', EmailDeploymentController.createDeployment)
   .delete('/:id', EmailDeploymentController.DeleteDeployemntById)
 
-export default router;
+module.exports = router;

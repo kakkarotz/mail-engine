@@ -10,6 +10,7 @@ const db = {}
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 db.EmailDeployment = require('./mailModel/EmailDeployment.model')(sequelize, DataTypes);
+db.Contact = require('./mailModel/Contact.model')(sequelize, DataTypes);
 module.exports = db;
 
 checkConnection = async () => {
