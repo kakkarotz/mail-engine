@@ -25,9 +25,17 @@ db.sequelize.sync({ force: true }).then(() => {
 });
 
 //requests
-app.get("/page",(req, res) => {
-    res.send("this is a page")
-})
+// app.get("/page",(req, res) => {
+//     res.send("this is a page")
+// })
+
+/** catch 404 and forward to error handler */
+app.use('*', (req, res) => {
+    return res.status(404).json({
+        success: false,
+        message: 'API endpoint doesnt exist'
+    })
+});
 
 
 //running server
